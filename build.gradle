@@ -14,5 +14,3 @@ repositories {
 dependencies {
     implementation 'org.javacord:javacord:3.0.0'
 }
-
-task stage(dependsOn: ['installDist'])
