@@ -1,1 +1,1 @@
-web: java src/main/java/com.github.darkzn98/Main.java
+web: java ./src/main/java/com.github.darkzn98/Main.java
