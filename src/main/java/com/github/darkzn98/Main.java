@@ -112,17 +112,26 @@ public class Main
 
                 TextChannel channel = event.getChannel();
 
-                EmbedBuilder embed = new EmbedBuilder();
-                embed.setTitle("INFO : ")
-                        .setImage(ppHDURL)
-                        .addField("Name : ", title)
-                        .addField("Bio :", bio)
-                        .addField("Follower, Following, Post : ",FFP_Info)
-                        .addInlineField("isPrivate :" ,isPrivate)
-                        .addInlineField("External Links : ",externalLinks)
-                        .setFooter(instaID)
-                ;
-                channel.sendMessage(embed);
+                try
+                {
+                    EmbedBuilder embed = new EmbedBuilder();
+                    embed.setTitle("INFO : ")
+                            .setImage(ppHDURL)
+                            .addField("Name : ", title)
+                            .addField("Bio :", bio)
+                            .addField("Follower, Following, Post : ",FFP_Info)
+                            .addInlineField("isPrivate :" ,isPrivate)
+                            .addInlineField("External Links : ",externalLinks)
+                            .setFooter(instaID)
+                    ;
+                    channel.sendMessage(embed);
+                }
+                catch (Exception ex)
+                {
+                    ex.printStackTrace();
+                    channel.sendMessage(ex.toString());
+                }
+
             }
         }
         );
